@@ -1,3 +1,13 @@
 python backed with fastapi and basic file based db
-svelte frontned with shacn-svelte
-docker compose
+svelte frontned with shacn-svelte comp lib
+docker compose everything together
+
+[main func]
+make list to query ytb videos
+download the videos
+get the most wathced sections of video and cut and edit them
+get the narration from audio of the sections {whisper ai}
+add subtitles to the screen based on the narration and time it correctly
+export the shorts
+upload the shorts to ytb or ... based on the settings daily/hourly...
+repeat from queue
