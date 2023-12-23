@@ -1,0 +1,3 @@
+python backed with fastapi and basic file based db
+svelte frontned with shacn-svelte
+docker compose
