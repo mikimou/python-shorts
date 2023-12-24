@@ -40,7 +40,7 @@ def get_audio():
 
 
 # TODOOOOO
-def get_ytb_transcipt():
+def get_ytb_transcipt(link):
     try:
         transcript = YouTubeTranscriptApi.get_transcript(video_id)
         formatter = SRTFormatter()
@@ -68,6 +68,9 @@ def audio_to_text():
         srtFilename = os.path.join("content/captions", f"captions.srt")
         with open(srtFilename, 'a', encoding='utf-8') as srtFile:
             srtFile.write(segment)
+
+    with open(os.path.join(caption_content_path, f"summary.txt"), 'w', encoding='utf-8') as sumfile:
+        sumfile.write(transcribe['text'])
 
 # download_video('https://www.youtube.com/watch?v=7MNv4_rTkfU', 'joe.mp4')
 # get_audio()
