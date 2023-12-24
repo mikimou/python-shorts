@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  ytbopapi:
+    build: https://github.com/Benjamin-Loison/YouTube-operational-API.git
+    restart: on-failure
+    hostname: ytbopapi
+    ports:
+      - 1999:80
+  backend:
+    build: ./backend
+    restart: on-failure
+    hostname: shorts-backend
+    depends_on:
+      - ytbopapi
+    volumes:
+      - shortsContent:/content
+    ports:
+      - 1998:80
+  frontend:
+    build: ./frontend
+    restart: on-failure
+    depends_on:
+      - ytbopapi
+      - backend
+    ports:
+      - 8080:80
+
+volumes:
+  shortsContent:

@@ -53,10 +53,9 @@ def download_mp3(video_id, file_path):
             '-i', mp4_file_path,
             os.path.join(file_path, "bgm.mp3")
         ])
+        print(f"Download is completed successfully for {video_id}")
     except:
         print("Error has occured video can not be downloaded")
-
-    print(f"Download is completed successfully for {video_id}")
 
 
 def get_transcript(video_id):

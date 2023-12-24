@@ -11,3 +11,15 @@ add subtitles to the screen based on the narration and time it correctly
 export the shorts
 upload the shorts to ytb or ... based on the settings daily/hourly...
 repeat from queue
+
+
+[steps]
+download video X
+convert to audio X
+if transcript available download if not generate with ai from audio file X
+get heat markers from yt if available if not get best sections from ai
+edit the video to shorts
+export the shorts
+upload the shorts
+
+!!! starttime and endtime sync to captions for better start and end of clips
